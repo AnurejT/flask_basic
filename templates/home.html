@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Name</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}">
+</head>
+<body>
+    <header>
+        <h1>CALICUT UNIVERSITY CAMPUS</h1>
+    </header>
+    <nav>
+        <a href="{{url_for('about')}}">About Us</a>
+        <a href="{{url_for('courses')}}">Courses</a>
+        <a href="{{url_for('admissions')}}">Admissions</a>
+        <a href="{{url_for('contact')}}">Contact</a>
+    </nav>
+    <div class="hero">
+    </div>
+    <div class="content">
+        <h2>About Our College</h2>
+        <p>Our institution is committed to excellence in education and fostering a strong learning environment for students across all disciplines.</p>
+    </div>
+    <footer>
+        &copy; 2025 CU CAMPUS. All Rights Reserved.
+    </footer>
+</body>
+</html>
