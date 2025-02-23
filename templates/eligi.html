@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eligibility for Admission - Calicut University</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        ul {
+            line-height: 1.6;
+        }
+        input, button {
+            display: block;
+            margin-top: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Check Your Eligibility</h1>
+        <p>Welcome to the eligibility criteria page for admissions at Calicut University. Below are the general requirements for various programs:</p>
+        
+        <h2>Upload Your Degree certificate</h2>
+        <form action="http://127.0.0.1:5000/eligibility/upload" method='post' enctype="multipart/form-data">
+            <input type="file" name="myfile">
+            <button type="submit">upload</button>
+        </form>
+        
+        <p>For detailed eligibility criteria for specific courses, please visit the official <a href="https://www.uoc.ac.in" target="_blank">Calicut University website</a>.</p>
+    </div>
+</body>
+</html>

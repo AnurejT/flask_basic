@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request, redirect, url_for
+import os
 
 app = Flask(__name__)
+
+app.config['UPLOAD_PATH'] = 'static/images'
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
@@ -32,6 +35,16 @@ def admissions():
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
+
+@app.route('/eligibility')
+def eligibility():
+    return render_template('eligi.html')
+
+@app.route('/eligibility/upload', methods=['POST'])
+def upload():
+    file = request.files['myfile']
+    file.save(os.path.join(app.config['UPLOAD_PATH'], file.filename))
+    return "file uploaded"
 
 if __name__ == '__main__':
     app.run(debug=True)
