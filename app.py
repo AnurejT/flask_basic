@@ -1,18 +1,23 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 import os
 
 app = Flask(__name__)
+app.secret_key = 'your_secret_key'
 
 app.config['UPLOAD_PATH'] = 'static/images'
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
+    error = None
     if request.method == 'POST':
         username = request.form['studentid']
         password = request.form['password']
 
         if username == "anurej" and password == "1234":
             return redirect(url_for('home'))
+        
+        else:
+            flash("Invalid Username or Password", "error")
 
     return render_template('login.html')
 

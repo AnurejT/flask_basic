@@ -1,7 +1,7 @@
-/* General Styles */
+/* General styles */
 body {
     font-family: Arial, sans-serif;
-    background: url('https://source.unsplash.com/1600x900/?college,university') no-repeat center center/cover;
+    background-color: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,22 +9,17 @@ body {
     margin: 0;
 }
 
-/* Login Container */
+/* Container for login */
 .login-container {
-    background: rgba(255, 255, 255, 0.9);
+    background: #fff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 300px;
 }
 
-/* Form Styling */
-h2 {
-    margin-bottom: 20px;
-    color: #004080;
-}
-
+/* Input fields */
 .input-group {
     margin-bottom: 15px;
     text-align: left;
@@ -43,18 +38,28 @@ h2 {
     border-radius: 5px;
 }
 
-/* Button Styling */
+/* Login button */
 button {
     width: 100%;
     padding: 10px;
-    background: #004080;
+    background-color: #007BFF;
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
     cursor: pointer;
 }
 
 button:hover {
-    background: #002f5f;
+    background-color: #0056b3;
+}
+
+/* Flash message */
+.flash-message {
+    background-color: #ffdddd;
+    color: #d8000c;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #d8000c;
+    border-radius: 5px;
+    text-align: center;
 }
